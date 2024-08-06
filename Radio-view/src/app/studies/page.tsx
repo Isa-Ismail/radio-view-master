@@ -13,19 +13,19 @@ export default function Page() {
     <div className="flex flex-col justify-between min-h-screen">
       <div>
         <div className="bg-[#1C1D1F] w-[100vw] p-4 flex justify-between gap-6 items-center">
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-6 px-10 items-center">
             <Image alt="logo" src={"/logo.png"} width={70} height={70} />
             <Typography variant="h4">RadioView.AI</Typography>
           </div>
-          <div>
+          <div className="px-5">
             <LogoutButton />
           </div>
         </div>
-        <div className="p-10">
+        <div className="p-5 px-10">
           <StudiesPage nonce={nonce} />
         </div>
       </div>
-      <div>
+      <div className="">
         <Footer />
       </div>
     </div>

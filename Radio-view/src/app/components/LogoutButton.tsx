@@ -7,6 +7,8 @@ const LogoutButton = () => {
   const router = useRouter();
   const logout = () => {
     router.push("/clinician-login");
+    // clear local storage after logout
+    localStorage.clear();
   };
   return (
     <button onClick={logout}>

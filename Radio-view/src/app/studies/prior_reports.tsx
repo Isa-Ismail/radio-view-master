@@ -32,6 +32,9 @@ import {
   Delete,
   Star,
   FiberManualRecord,
+  VisibilityOutlined,
+  CancelOutlined,
+  Cancel,
 } from "@mui/icons-material";
 import DashboardCards, {
   DashboardCardItem,
@@ -65,6 +68,13 @@ import { isError, useMutation, useQuery, useQueryClient } from "react-query";
 import getAccessToken from "@/utils/get_acess_token";
 import { bodyParts, modalities, sites } from "@/utils/info";
 import AppButton from "../components/Button";
+import VisibilityIcon from "./Icons/visibility.jpg";
+import YellowDot from "./Icons/YellowDot";
+import GreenDot from "./Icons/GreenDot";
+import RedDot from "./Icons/RedDot";
+import DeleteTrashIcon from "../icons/DeleteTrashIcon";
+import NoMatch from "./Icons/NotFound.jpg";
+import { useAppSnackbar } from "@/hooks/snackbar";
 
 type Row = {
   patient_name: string;
@@ -115,6 +125,10 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
   const [modifiedDate, setModifiedDate] = useState<string>("");
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   const [deleteRowId, setDeleteRowId] = useState<string>("");
+  const { errorSnackbar } = useAppSnackbar();
+  const [currentPage, setCurrentPage] = useState(0);
+  const rowsPerPage = 10;
+
   useEffect(() => {
     setPage(0);
   }, [filterProps]);
@@ -194,7 +208,7 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
     user_id: userData.hsai_guid,
     ...(modalityFilter && { modality: modalityFilter }),
     ...(bodyPartFilter && { body_part_examined: bodyPartFilter }),
-    ...(name && { name: searchText }),
+    ...(searchText && { name: searchText }),
     ...(reportStatusFilter && { report_status: reportStatusFilter }),
     ...(filterProps?.dateRange && {
       dateRange: modifiedDate,
@@ -251,7 +265,9 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
   };
 
   useEffect(() => {
-    refetchReports();
+    debounce.current(() => {
+      refetchReports();
+    });
   }, [
     modifiedDate,
     token,
@@ -261,6 +277,7 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
     searchText,
     reportStatusFilter,
     siteFilter,
+    page,
   ]);
 
   useEffect(() => {
@@ -381,15 +398,17 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
             <Button
               sx={{
                 // make border rounded
+                width: "100px",
+                textTransform: "none",
                 borderRadius: "30px",
               }}
               onClick={() => setFilterDialogOpen(true)}
               variant="outlined"
             >
-              <p>Filter</p>
+              <p className="text-lg">Filter</p>
             </Button>
 
-            <FormControl sx={{ minWidth: 180 }}>
+            <FormControl sx={{ minWidth: 200 }}>
               <Autocomplete
                 sx={{
                   "& .MuiOutlinedInput-root": {
@@ -399,7 +418,9 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
                 id="site-filter"
                 options={sites}
                 getOptionLabel={(option) => option.site_name}
-                renderInput={(params) => <TextField {...params} label="Site" />}
+                renderInput={(params) => (
+                  <TextField {...params} label="All system and Sites" />
+                )}
                 onChange={(event, newValue) => {
                   setSiteFilter(newValue ? newValue.site_id : "");
                 }}
@@ -448,7 +469,7 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
                     borderRadius: 8,
                   },
                 }}
-                options={["Not Started", "In Progress", "completed"]}
+                options={["Not Started", "In Progress", "pending", "completed"]}
                 value={reportStatusFilter}
                 onChange={(event, newValue) => {
                   setReportStatusFilter(newValue || "");
@@ -465,9 +486,16 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
             <Button
               sx={{
                 // make border rounded
+                width: "100px",
+                textTransform: "none",
                 borderRadius: "30px",
               }}
               onClick={() => {
+                dispatch(
+                  setstudyFilter({
+                    dateRange: undefined,
+                  })
+                );
                 setModalityFilter("");
                 setBodyPartFilter("");
                 setReportStatusFilter("");
@@ -475,13 +503,13 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
               }}
               variant="outlined"
             >
-              <p>Reset</p>
+              <p className="text-lg">Reset</p>
             </Button>
 
-            <div className="bg-[#1C1D1F] flex items-center rounded-[30px] p-2 border-solid border-2 border-white">
+            <div className="bg-[#1C1D1F] flex items-center rounded-[30px] px-4 py-1 border-solid border-[1px] border-white">
               <input
                 onChange={(e) => setSearchText(e.target.value)}
-                placeholder="Search by patient name"
+                placeholder="Search by Patient"
               />
               <Search />
             </div>
@@ -503,7 +531,9 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
                   <Typography variant="h6">Modality | Body Area </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography variant="h6">Viewer</Typography>
+                  <Typography style={{ marginLeft: "1rem" }} variant="h6">
+                    Viewer
+                  </Typography>
                 </TableCell>
                 <TableCell>
                   <Typography variant="h6">Report Status</Typography>
@@ -514,65 +544,103 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
               </TableRow>
             </TableHead>
             <TableBody className="bg-[#1C1D1F]">
-              {preprocessedData?.map((row: any, id: any) => (
-                <>
-                  <TableRow key={id}>
-                    <TableCell>{row.report_title}</TableCell>
-                    <TableCell>
-                      {dayjs(row.date.toString()).format(
-                        "MMM DD, YYYY | hh:mm A"
-                      )}
-                    </TableCell>
-                    <TableCell>{row.site_name}</TableCell>
-                    <TableCell>
-                      {row.modalities} | {row.body_part}
-                    </TableCell>
-                    <TableCell>
-                      <button
+              {preprocessedData
+                ?.slice(
+                  currentPage * rowsPerPage,
+                  (currentPage + 1) * rowsPerPage
+                )
+                ?.map((row: any, id: any) => (
+                  <>
+                    <TableRow key={id}>
+                      <TableCell>{row.report_title}</TableCell>
+                      <TableCell>
+                        {dayjs(row.date.toString()).format(
+                          "MMM DD, YYYY | hh:mm A"
+                        )}
+                      </TableCell>
+                      <TableCell>{row.site_name}</TableCell>
+                      <TableCell>
+                        {row.modalities} | {row.body_part}
+                      </TableCell>
+                      <TableCell>
+                        <button
+                          onClick={() => {
+                            errorSnackbar(
+                              "You already have a report for this study"
+                            );
+                          }}
+                          className="bg-white flex space-x-2 text-black px-3 py-1.5 items-center rounded-full"
+                        >
+                          <VisibilityOutlined />
+                          <p>Viewer</p>
+                        </button>
+                      </TableCell>
+                      <TableCell className="flex">
+                        <div className="flex gap-2 items-center">
+                          {row.report_status === "pending" ? (
+                            <YellowDot />
+                          ) : row.report_status === "completed" ? (
+                            <GreenDot />
+                          ) : (
+                            <RedDot />
+                          )}{" "}
+                          {row.report_status}
+                        </div>
+                      </TableCell>
+                      <TableCell
                         onClick={() => {
-                          setStudy(row.study);
-                          setRRG(row.modalities + "-" + row.body_part);
-                          setUid(row.study_instance_uid);
-                          setStudyId(row.studyId);
-                          router.push(`/clinician-view`);
+                          setDialogOpen(true);
+                          setDeleteRowId(row.id);
                         }}
-                        className="bg-white flex space-x-2 text-black px-4 py-2 rounded-full"
+                        className="cursor-pointer"
                       >
-                        <Visibility />
-                        <p>Viewer</p>
-                      </button>
-                    </TableCell>
-                    <TableCell className="flex">
-                      <FiberManualRecord
-                        className={
-                          row.report_status === "pending"
-                            ? "text-yellow-300"
-                            : row.report_status === "completed"
-                            ? "text-green-500"
-                            : "text-red-500"
-                        }
-                      />{" "}
-                      {row.report_status}
-                    </TableCell>
-                    <TableCell
-                      onClick={() => {
-                        setDialogOpen(true);
-                        setDeleteRowId(row.id);
-                      }}
-                      className="cursor-pointer"
-                    >
-                      <Delete />
-                    </TableCell>
-                  </TableRow>
-                </>
-              ))}
+                        <Delete />
+                      </TableCell>
+                    </TableRow>
+                  </>
+                ))}
             </TableBody>
           </Table>
-          <div className={`bg-[#1C1D1F] p-4 flex items-center justify-center}`}>
+          <div className="bg-[#1C1D1F] w-full p-4 flex items-center justify-center">
             {preprocessedData?.length > 0 ? (
-              <></>
+              <div className="flex w-full justify-end items-center">
+                <p>
+                  {currentPage * rowsPerPage + 1} -{" "}
+                  {Math.min(
+                    (currentPage + 1) * rowsPerPage,
+                    preprocessedData.length
+                  )}{" "}
+                  of {preprocessedData.length}
+                </p>
+                <ChevronLeft
+                  className={`${
+                    currentPage === 0
+                      ? "opacity-50 cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
+                  onClick={() => {
+                    if (currentPage > 0) setCurrentPage(currentPage - 1);
+                  }}
+                />
+                <ChevronRight
+                  className={`${
+                    (currentPage + 1) * rowsPerPage >= preprocessedData.length
+                      ? "opacity-50 cursor-not-allowed"
+                      : "cursor-pointer"
+                  }`}
+                  onClick={() => {
+                    if (
+                      (currentPage + 1) * rowsPerPage <
+                      preprocessedData.length
+                    )
+                      setCurrentPage(currentPage + 1);
+                  }}
+                />
+              </div>
             ) : (
-              <p>Sorry, there is no matching data to display</p>
+              <div className="flex w-full justify-center items-center h-[70%] my-[6rem]">
+                <Image width={500} height={500} alt="not found" src={NoMatch} />
+              </div>
             )}
           </div>
         </>
@@ -586,7 +654,19 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
         }}
       >
         <DialogContent className="py-5">
-          Are you sure you want to delete this prior report?
+          <div className="flex flex-col gap-4 justify-center text-center">
+            <div
+              onClick={() => setDialogOpen(false)}
+              className="flex justify-end text-end cursor-pointer"
+            >
+              <Cancel className="text-[#C7C7CC] " />
+            </div>
+            <div className="flex mt-[-2rem] justify-center text-center ">
+              <DeleteTrashIcon />
+            </div>
+            <h2>Confirmation</h2>
+            <h2>Are you sure you want to delete this prior report?</h2>
+          </div>
         </DialogContent>
         <DialogActions>
           <AppButton
@@ -599,6 +679,7 @@ export default function PriorReportsPage({ nonce }: { nonce: string }) {
             Cancel
           </AppButton>
           <AppButton
+            color="#539DF3"
             onClick={() => {
               handleDelete(deleteRowId);
               setDialogOpen(false);

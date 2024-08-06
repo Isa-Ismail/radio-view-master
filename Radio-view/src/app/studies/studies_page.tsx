@@ -27,6 +27,7 @@ import {
   ExpandLess,
   Visibility,
   FiberManualRecord,
+  VisibilityOutlined,
 } from "@mui/icons-material";
 import DashboardCards, {
   DashboardCardItem,
@@ -39,6 +40,7 @@ import { selectAuth } from "@/store/auth/authSlice";
 import { useGetDataQuery } from "@/store/dashboard/dashboardApi";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { useGetStudiesQuery } from "@/store/study/studyApi";
+import VisibilityIcon from "./Icons/visibility.jpg";
 import {
   StudyFilterProps,
   selectstudy,
@@ -59,6 +61,8 @@ import { useGetAllSitesQuery } from "@/store/site/siteApi";
 import PriorReportsPage from "./prior_reports";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { bodyParts, modalities, sites } from "@/utils/info";
+import RedDot from "./Icons/RedDot";
+import NoMatch from "./Icons/NotFound.jpg";
 
 const queryClient = new QueryClient();
 
@@ -267,7 +271,7 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
-        <div className="flex py-10 gap-4">
+        <div className="flex py-5 gap-4">
           <Typography
             className={`${
               views === "studies" ? "underline text-[#539DF3]" : ""
@@ -306,15 +310,17 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                   <Button
                     sx={{
                       // make border rounded
+                      width: "100px",
+                      textTransform: "none",
                       borderRadius: "30px",
                     }}
                     onClick={() => setFilterDialogOpen(true)}
                     variant="outlined"
                   >
-                    <p>Filter</p>
+                    <p className="text-lg">Filter</p>
                   </Button>
 
-                  <FormControl sx={{ width: 180 }}>
+                  <FormControl sx={{ minWidth: 200 }}>
                     <Autocomplete
                       sx={{
                         "& .MuiOutlinedInput-root": {
@@ -325,7 +331,7 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                       options={sites}
                       getOptionLabel={(option) => option.site_name}
                       renderInput={(params) => (
-                        <TextField {...params} label="Site" />
+                        <TextField {...params} label="All system and Sites" />
                       )}
                       onChange={(event, newValue) => {
                         setSiteFilter(newValue ? newValue.site_id : "");
@@ -392,24 +398,33 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                   <Button
                     sx={{
                       // make border rounded
+                      width: "100px",
+                      textTransform: "none",
                       borderRadius: "30px",
                     }}
                     onClick={() => {
+                      dispatch(
+                        setstudyFilter({
+                          dateRange: undefined,
+                        })
+                      );
                       setModalityFilter("");
                       setBodyPartFilter("");
                       setReportStatusFilter("");
+                      setPage(0);
+                      setDatatablePage(0);
                       setSiteFilter("");
                       setSearchText("");
                     }}
                     variant="outlined"
                   >
-                    <p>Reset</p>
+                    <p className="text-lg">Reset</p>
                   </Button>
-                  <div className="bg-[#1C1D1F] flex items-center rounded-[30px] p-2 border-solid border-2 border-white">
+                  <div className="bg-[#1C1D1F] flex items-center rounded-[30px] px-4 py-1 border-solid border-[1.4px] border-white">
                     <input
                       value={searchText as string}
                       onChange={(e) => setSearchText(e.target.value)}
-                      placeholder="Search by patient name"
+                      placeholder="Search by Patient"
                     />
                     <Search />
                   </div>
@@ -433,7 +448,9 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                         </Typography>
                       </TableCell>
                       <TableCell>
-                        <Typography variant="h6">Viewer</Typography>
+                        <Typography style={{ marginLeft: "1rem" }} variant="h6">
+                          Viewer
+                        </Typography>
                       </TableCell>
                       <TableCell>
                         <Typography variant="h6">Report Status</Typography>
@@ -476,15 +493,16 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                                 setRRG(row.modality + "-" + row.bodyPart);
                                 router.push(`/clinician-view`);
                               }}
-                              className="bg-white cursor-pointer flex space-x-2 text-black px-4 py-2 rounded-full"
+                              className="bg-white cursor-pointer flex items-center space-x-2 text-black px-3 py-1.5 rounded-full"
                             >
-                              <Visibility />
+                              <VisibilityOutlined />
                               <p>Viewer</p>
                             </button>
                           </TableCell>
                           <TableCell>
-                            <FiberManualRecord className="text-red-500" /> Not
-                            Started
+                            <div className="flex gap-2 items-center">
+                              <RedDot /> <p>Not Started</p>
+                            </div>
                           </TableCell>
                         </TableRow>
                         {expandedRows.includes(id) && (
@@ -524,29 +542,40 @@ export default function StudiesPage({ nonce }: { nonce: string }) {
                   {rows.length > 0 ? (
                     <>
                       <p>
-                        {page * 10 + 1} - {page * 10 + 10} of {total}
+                        {datatablePage * 10 + 1} - {datatablePage * 10 + 10} of{" "}
+                        {total}
                       </p>
                       <ChevronLeft
                         className={`${
-                          page === 0
+                          datatablePage === 0
                             ? "opacity-50 cursor-not-allowed"
                             : "cursor-pointer"
                         }`}
                         onClick={() => {
-                          if (page > 0) setDatatablePage((page) => page - 1);
+                          if (datatablePage > 0)
+                            setDatatablePage(
+                              (datatablePage) => datatablePage - 1
+                            );
                         }}
                       />
                       <ChevronRight
                         className="cursor-pointer"
                         onClick={() => {
-                          setDatatablePage((page) => page + 1);
+                          setDatatablePage(
+                            (datatablePage) => datatablePage + 1
+                          );
                         }}
                       />
                     </>
                   ) : (
-                    <>
-                      <p>Sorry, there is no matching data to display</p>
-                    </>
+                    <div className="flex justify-center items-center h-[70%] my-[6rem]">
+                      <Image
+                        width={500}
+                        height={500}
+                        alt="not found"
+                        src={NoMatch}
+                      />
+                    </div>
                   )}
                 </div>
               </>

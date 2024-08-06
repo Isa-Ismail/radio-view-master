@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   return runGqlQuery({
     req,
-    query: ({ offset, limit, json }) => {
+    query: ({ limit, json }) => {
       const user_id = json.get("user_id");
       const modality = json.get("modality");
       const body_part_examined = json.get("body_part_examined");
@@ -12,6 +12,7 @@ export async function GET(req: NextRequest) {
       const name = json.get("name");
       const report_status = json.get("report_status");
       const site_id = json.get("site_id");
+      const offset = json.get("offset");
 
       let filters = `user_id: {_eq: "${user_id}"}`;
 
@@ -46,9 +47,7 @@ export async function GET(req: NextRequest) {
       }
 
       if (dateRange) {
-        console.log(dateRange)
-        const startDate = dateRange.split(",")[0];
-        const endDate = dateRange.split(",")[1];
+        const [startDate, endDate] = dateRange.split(",");
         if (startDate && endDate) {
           filters += `, updated_at: { _gte: "${startDate}", _lte: "${endDate}" }`;
         } else if (startDate) {
@@ -57,9 +56,11 @@ export async function GET(req: NextRequest) {
           filters += `, updated_at: { _lte: "${endDate}" }`;
         }
       }
+
       if (name) {
         filters += `, report_title: {_ilike: "%${name}%"}`;
       }
+
       if (report_status) {
         filters += `, report_status: {_eq: "${report_status}"}`;
       }

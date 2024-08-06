@@ -64,11 +64,13 @@ export default function AppButton({
           loading={loadingState}
           nonce={nonce}
           sx={{
-            border: "1px solid #FFFFFF",
+            textTransform: "none",
+            border: "",
             height: small ? null : 40,
             borderRadius: 20,
             minWidth: 100,
-          }}>
+          }}
+        >
           {children}
         </LoadingButton>
       </ThemeProvider>

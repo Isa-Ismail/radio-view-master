@@ -52,15 +52,7 @@ function SignInForm({ nonce }: { nonce: string }) {
   const onSubmit = async (data: SignInForm) => {
     setLoading(true);
     const { username, password } = data;
-    const passwordContainsDigit = /\d/.test(password!);
-    if (!passwordContainsDigit) {
-      successSnackbar(
-        "Please reset your password using the forget-password method to continue."
-      );
-      setLoading(false);
-      router.push("/forgot-password?email=" + username);
-      return;
-    }
+
     try {
       const res = await fetch("/api/clinician-login", {
         method: "POST",

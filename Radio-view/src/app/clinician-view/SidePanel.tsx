@@ -4,6 +4,7 @@ import useUserStore from "@/store/zustand/context";
 import {
   ArrowBack,
   ArrowUpward,
+  Cancel,
   Circle,
   CopyAll,
   Delete,
@@ -11,6 +12,7 @@ import {
   FiberManualRecord,
   Logout,
   Mic,
+  PauseCircleOutline,
   Save,
   Send,
 } from "@mui/icons-material";
@@ -63,6 +65,12 @@ import DeleteIcon from "./icons/DeleteIcon";
 import File2Icon from "./icons/File2Icon";
 import AppButton from "../components/Button";
 import { useAppSnackbar } from "@/hooks/snackbar";
+import DeleteTrashIcon from "../icons/DeleteTrashIcon";
+import useDebouncer from "@/hooks/debounce";
+import FileWhite from "./icons/FileWhite";
+import NoFind from "./icons/NoFind.jpg";
+import NoMatch from "./icons/SearchNotFound.jpg";
+import Dot from "../studies/Icons/Dot";
 
 const constUID = "1.2.276.0.7230010.3.1.2.811938916.1.1719000807.352293";
 
@@ -108,6 +116,39 @@ const SidePanel = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [deleteId, setDeleteId] = useState("");
   const [reportTitle, setReportTitle] = useState<string>("");
+  const [cancelRecordingDialog, setCancelRecordingDialog] = useState(false);
+  const debounce = useRef(useDebouncer(1000));
+  const [permission, setPermission] = useState<
+    "granted" | "denied" | "prompt" | "default"
+  >("default");
+  const [isSupported, setIsSupported] = useState(true);
+
+  useEffect(() => {
+    const checkPermission = () => {
+      if (navigator.permissions) {
+        (
+          navigator.permissions.query({
+            name: "microphone" as PermissionName,
+          }) as Promise<PermissionStatus>
+        )
+          .then((result) => {
+            console.log(result);
+            setPermission(result.state);
+
+            result.onchange = () => {
+              setPermission(result.state);
+            };
+          })
+          .catch((error) => {
+            console.error("Error checking microphone permission:", error);
+          });
+      } else {
+        setIsSupported(false);
+      }
+    };
+
+    checkPermission();
+  }, []);
 
   const bars = Array.from({ length: 20 }, (_, index) => index);
 
@@ -323,7 +364,6 @@ const SidePanel = () => {
 
   const handlePause = () => {
     recorder.current?.pause();
-    setIsRecording(false);
     setIsPaused(true);
   };
 
@@ -331,7 +371,6 @@ const SidePanel = () => {
     if (recorder.current?.state === "paused") {
       recorder.current?.resume();
     }
-    setIsRecording(true);
     setIsPaused(false);
   };
 
@@ -387,7 +426,9 @@ const SidePanel = () => {
   );
 
   useEffect(() => {
-    refetchReports();
+    debounce.current(() => {
+      refetchReports();
+    });
   }, [RRGSearch, refetchReports, view, token]);
 
   useEffect(() => {
@@ -420,14 +461,14 @@ const SidePanel = () => {
       <div className="flex">
         <div className="flex">
           <div>
-            {/* <div
+            <div
               onClick={() => {
-                // router.push("/studies");
+                router.push("/studies");
               }}
               className={`cursor-pointer absolute top-[5px] left-10 opacity-0`}
             >
               <Typography variant="h3">RadioView.AI</Typography>
-            </div> */}
+            </div>
             <div
               className={`absolute top-[5px] ${
                 rrgOpen ? "right-20" : "right-20"
@@ -436,55 +477,74 @@ const SidePanel = () => {
               {isRecording ? (
                 <div className="rounded-[30px] h-[42px] p-2 flex gap-2 bg-[#525252]">
                   {/* <File2Icon /> */}
-                  <Delete
-                    className="text-[#8E8E93] cursor-pointer"
-                    onClick={() => setIsRecording(false)}
-                  />
-                  <Mic className="text-red-500" />
-                  <div>
-                    {transcribing ? (
-                      <div
-                        style={{
-                          marginTop: ".5rem",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          gap: "3px",
-                        }}
-                      >
-                        {bars.map((bar) => (
-                          <div
-                            className="bg-blue-400"
-                            key={bar}
-                            style={{
-                              marginTop: ".25rem",
-                              width: "2px",
-                              height: "5px",
-                            }}
-                          />
-                        ))}
-                      </div>
-                    ) : (
-                      <Image
-                        className="mt-[-.5rem]"
-                        src={Audio}
-                        alt="alt"
-                        height={35}
-                        width={150}
+                  {permission === "granted" ? (
+                    <>
+                      <Delete
+                        className="text-[#8E8E93] cursor-pointer"
+                        onClick={() => setCancelRecordingDialog(true)}
                       />
-                    )}
-                  </div>
-                  {transcribing ? (
-                    <div className="">
-                      <CircularProgress size={"0.8rem"} />
-                    </div>
+                      {/* Pause logic here */}
+                      {isPaused ? (
+                        <Mic
+                          className="text-red-500 cursor-pointer"
+                          onClick={handlePlay}
+                        />
+                      ) : (
+                        <PauseCircleOutline
+                          onClick={handlePause}
+                          className="text-red-500 cursor-pointer"
+                        />
+                      )}
+                      <div>
+                        {transcribing || isPaused ? (
+                          <div
+                            style={{
+                              marginTop: ".5rem",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              gap: "3px",
+                            }}
+                          >
+                            {bars.map((bar) => (
+                              <div
+                                className="bg-blue-400"
+                                key={bar}
+                                style={{
+                                  marginTop: ".25rem",
+                                  width: "2px",
+                                  height: "5px",
+                                }}
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <Image
+                            className="mt-[-.5rem]"
+                            src={Audio}
+                            alt="alt"
+                            height={35}
+                            width={150}
+                          />
+                        )}
+                      </div>
+                      {transcribing ? (
+                        <div className="">
+                          <CircularProgress size={"0.8rem"} />
+                        </div>
+                      ) : (
+                        <ArrowUpward
+                          onClick={() => {
+                            onStopRecording();
+                          }}
+                          className="bg-blue-600 rounded-full cursor-pointer"
+                        />
+                      )}
+                    </>
                   ) : (
-                    <ArrowUpward
-                      onClick={() => {
-                        onStopRecording();
-                      }}
-                      className="bg-blue-600 rounded-full cursor-pointer"
-                    />
+                    <p className="text-sm text-red-500">
+                      Mircrophone Permission is not granted
+                    </p>
                   )}
                 </div>
               ) : (
@@ -498,7 +558,7 @@ const SidePanel = () => {
                 </div>
               )}
             </div>
-            {/* <div
+            <div
               className={`absolute cursor-pointer top-[10px] ${
                 rrgOpen ? "right-5" : "right-5"
               }`}
@@ -507,17 +567,17 @@ const SidePanel = () => {
               }}
             >
               <Logout />
-            </div> */}
+            </div>
             <iframe
               style={{
                 height: "100vh",
-                width: `${rrgOpen ? "80vw" : "100vw"}`,
+                width: `${rrgOpen ? "78vw" : "100vw"}`,
               }}
-              src={`https://radiologist.netlify.app`}
+              src={`https://radioview-1.netlify.app/viewer?StudyInstanceUIDs=${constUID}`}
             />
           </div>
           <div className="flex flex-col gap-4">
-            <nav className="h-[3.25rem] w-[20vw] bg-[#1C1D1F]"></nav>
+            <nav className="h-[3.25rem] w-[22vw] bg-[#1C1D1F]"></nav>
             {detailsScreen ? (
               <>
                 <div className="p-5 flex flex-col gap-10 h-[90vh] overflow-y-auto overflow-x-hidden">
@@ -577,6 +637,11 @@ const SidePanel = () => {
                           }),
                         ]}
                       />
+                      {reportContent === "" && (
+                        <div className="p-3 text-sm text-red-500">
+                          Report cannot be empty
+                        </div>
+                      )}
                     </div>
                   )}
                   {editing ? (
@@ -595,6 +660,7 @@ const SidePanel = () => {
                         Cancel
                       </Button>
                       <Button
+                        disabled={reportContent === ""}
                         onClick={() => {
                           setIsEditing(false);
                         }}
@@ -798,17 +864,19 @@ const SidePanel = () => {
                                 setTemplateSelected(true);
                                 setTemplateId(template.template_id);
                               }}
-                              className="flex justify-start items-center gap-3 rounded-lg bg-[#1C1D1F] py-2 px-3 mx-[1.5rem] cursor-pointer hover:bg-[#222325]"
+                              className="flex justify-between items-center gap-3 rounded-lg bg-[#1C1D1F] py-2 px-3 mx-[1.5rem] cursor-pointer hover:bg-[#222325]"
                             >
-                              <div>
-                                <Image
-                                  width={15}
-                                  height={15}
-                                  src={FileIcon}
-                                  alt="file"
-                                />
+                              <div className="flex gap-3 items-center">
+                                <div className="flex-shrink-0">
+                                  <FileWhite />
+                                </div>
+                                <p className="text-ellipsis flex-grow">
+                                  {template.long_description}
+                                </p>
                               </div>
-                              <p>{template.long_description}</p>
+                              <div>
+                                <Dot />
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -824,78 +892,98 @@ const SidePanel = () => {
                             </div>
                           ) : (
                             <div className="flex justify-center pr-4 w-full">
-                              <div className="bg-[#1C1D1F] w-full rounded-lg ml-4 py-4 px-1 space-y-5">
-                                {reportsDataTable?.length === 0 && (
-                                  <div className="w-full flex justify-center items-center">
-                                    No Reports Found
-                                  </div>
-                                )}
-                                {reportsDataTable.map((data: any, id: any) => (
-                                  <div
-                                    style={{
-                                      borderBottom: "1px",
-                                      borderColor: "white",
-                                      borderStyle: "solid",
-                                      borderWidth: "130%",
-                                      cursor: "pointer",
-                                    }}
-                                    className="flex flex-col gap-2 p-4 hover:bg-[#222325]"
-                                    key={id}
-                                    onClick={() => {
-                                      setReportData(data);
-                                      setDetailsScreen(true);
-                                      setReportContent(data.report_content);
-                                    }}
-                                  >
-                                    <div className="flex justify-between gap-2 items-center">
-                                      <p className="text-sm text-[#C7C7CC]">
-                                        {dayjs(data.created_at).format(
-                                          "MMM DD, YYYY"
-                                        )}
-                                      </p>
-                                      <div className="flex gap-1 justify-center items-center">
-                                        <FiberManualRecord
-                                          className={
-                                            data.report_status === "pending"
-                                              ? "text-yellow-300"
-                                              : data.report_status ===
-                                                "completed"
-                                              ? "text-green-500"
-                                              : "text-red-500"
-                                          }
-                                        />
-                                        <p className="text-sm text-[#C7C7CC]">
-                                          {data.report_status}
-                                        </p>
-                                      </div>
-                                      <p className="text-sm text-[#C7C7CC]">
-                                        {dayjs(data.created_at).format(
-                                          "h:mm A"
-                                        )}
-                                      </p>
+                              {reportsDataTable?.length === 0 ? (
+                                <div className="w-full flex justify-center items-center">
+                                  {RRGSearch ? (
+                                    <div className="flex justify-center items-center">
+                                      <Image
+                                        alt="logo"
+                                        src={NoMatch}
+                                        width={400}
+                                        height={400}
+                                      />
                                     </div>
-                                    <div className="flex justify-between gap-3">
-                                      <div className="flex gap-2 items-center">
-                                        <File2Icon />
-                                        <p>
-                                          {data.report_title.slice(0, 25) +
-                                            "..."}
-                                        </p>
-                                      </div>
-                                      <button
-                                        onClick={(e) => {
-                                          e.stopPropagation();
-                                          setShowDialog(true);
-                                          setDeleteId(data.id);
+                                  ) : (
+                                    <div className="flex justify-center items-center">
+                                      <Image
+                                        alt="logo"
+                                        src={NoFind}
+                                        width={200}
+                                        height={200}
+                                      />
+                                    </div>
+                                  )}
+                                </div>
+                              ) : (
+                                <div className="bg-[#1C1D1F] w-full rounded-lg lg:m-4 space-y-5">
+                                  {reportsDataTable.map(
+                                    (data: any, id: any) => (
+                                      <div
+                                        style={{
+                                          borderBottom: "1px",
+                                          borderColor: "white",
+                                          borderStyle: "solid",
+                                          borderWidth: "130%",
+                                          cursor: "pointer",
+                                        }}
+                                        className="flex flex-col gap-2 p-4 hover:bg-[#222325]"
+                                        key={id}
+                                        onClick={() => {
+                                          setReportData(data);
+                                          setDetailsScreen(true);
+                                          setReportContent(data.report_content);
                                         }}
                                       >
-                                        <DeleteIcon />
-                                      </button>
-                                    </div>
-                                    {/* <Divider className="text-white h-2" /> */}
-                                  </div>
-                                ))}
-                              </div>
+                                        <div className="flex justify-between gap-2 items-center">
+                                          <p className="text-[12px] text-[#C7C7CC]">
+                                            {dayjs(data.created_at).format(
+                                              "MMM DD, YYYY"
+                                            )}
+                                          </p>
+                                          <div className="flex gap-1 justify-center items-center">
+                                            <FiberManualRecord
+                                              className={
+                                                data.report_status === "pending"
+                                                  ? "text-yellow-300"
+                                                  : data.report_status ===
+                                                    "completed"
+                                                  ? "text-green-500"
+                                                  : "text-red-500"
+                                              }
+                                            />
+                                            <p className="text-[12px] text-[#C7C7CC]">
+                                              {data.report_status}
+                                            </p>
+                                          </div>
+                                          <p className="text-[12px] text-[#C7C7CC]">
+                                            {dayjs(data.created_at).format(
+                                              "h:mm A"
+                                            )}
+                                          </p>
+                                        </div>
+                                        <div className="flex justify-between gap-3">
+                                          <div className="flex gap-2 items-center">
+                                            <File2Icon />
+                                            <p className="text-ellipsis text-[14px] flex-grow">
+                                              {data.report_title}
+                                            </p>
+                                          </div>
+                                          <button
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              setShowDialog(true);
+                                              setDeleteId(data.id);
+                                            }}
+                                          >
+                                            <DeleteIcon />
+                                          </button>
+                                        </div>
+                                        {/* <Divider className="text-white h-2" /> */}
+                                      </div>
+                                    )
+                                  )}
+                                </div>
+                              )}
                             </div>
                           )}
                         </>
@@ -937,6 +1025,10 @@ const SidePanel = () => {
                               <div className="h-[90vh] flex flex-col gap-6 p-5 overflow-x-hidden overflow-y-auto">
                                 <StudyInfo study={study} />
                                 <Modality modality={rrg} />
+                                <h3 className="text-blue-500 mb-[-1.5rem]">
+                                  Normal Template for{" "}
+                                </h3>
+                                <h3>{templateData?.short_description}</h3>
                                 <Markdown>
                                   {templateData?.normal_report}
                                 </Markdown>
@@ -949,6 +1041,7 @@ const SidePanel = () => {
                                       }}
                                       variant="outlined"
                                       style={{
+                                        textTransform: "none",
                                         borderRadius: "30px",
                                         color: "#FFFFFF",
                                         fontSize: "15px",
@@ -962,6 +1055,7 @@ const SidePanel = () => {
                                       }}
                                       variant="contained"
                                       style={{
+                                        textTransform: "none",
                                         borderRadius: "30px",
                                         backgroundColor: "#007AFF",
                                         color: "#FFFFFF",
@@ -993,7 +1087,11 @@ const SidePanel = () => {
                           <StudyInfo study={study} />
                           <Modality modality={rrg} />
                           <div>
-                            <h3>{rrgData.report_title}</h3>
+                            {rrgData.is_invalid ? (
+                              <h3>Wrong Dictation</h3>
+                            ) : (
+                              <h3>{rrgData.report_title}</h3>
+                            )}
                           </div>
                         </div>
                         {!editing ? (
@@ -1036,6 +1134,11 @@ const SidePanel = () => {
                                 }),
                               ]}
                             />
+                            {transcription === "" && (
+                              <div className="text-center text-red-500">
+                                Report cannot be empty
+                              </div>
+                            )}
                           </div>
                         )}
                         {editing ? (
@@ -1054,6 +1157,7 @@ const SidePanel = () => {
                               Cancel
                             </Button>
                             <Button
+                              disabled={transcription === ""}
                               onClick={() => {
                                 setIsEditing(false);
                               }}
@@ -1136,13 +1240,70 @@ const SidePanel = () => {
 
       <Dialog
         maxWidth="md"
+        open={cancelRecordingDialog}
+        onClose={() => {
+          setShowDialog(false);
+        }}
+      >
+        <DialogContent className="py-5">
+          <div className="flex flex-col gap-4 justify-center text-center">
+            <div
+              onClick={() => setCancelRecordingDialog(false)}
+              className="flex justify-end text-end cursor-pointer"
+            >
+              <Cancel className="text-[#C7C7CC] " />
+            </div>
+            <div className="flex mt-[-2rem] justify-center text-center ">
+              <DeleteTrashIcon />
+            </div>
+            <h2>Confirmation</h2>
+            <h2>Are you sure you want to delete this recording?</h2>
+          </div>
+        </DialogContent>
+        <DialogActions>
+          <AppButton
+            variant="outlined"
+            onClick={() => {
+              setCancelRecordingDialog(false);
+            }}
+            nonce={"delete"}
+          >
+            Cancel
+          </AppButton>
+          <AppButton
+            color="#539DF3"
+            onClick={() => {
+              setIsRecording(false);
+              setCancelRecordingDialog(false);
+            }}
+            nonce={"delete"}
+          >
+            Delete
+          </AppButton>
+        </DialogActions>
+      </Dialog>
+
+      <Dialog
+        maxWidth="md"
         open={showDialog}
         onClose={() => {
           setShowDialog(false);
         }}
       >
         <DialogContent className="py-5">
-          Are you sure you want to delete this prior report?
+          <div className="flex flex-col gap-4 justify-center text-center">
+            <div
+              onClick={() => setShowDialog(false)}
+              className="flex justify-end text-end cursor-pointer"
+            >
+              <Cancel className="text-[#C7C7CC] " />
+            </div>
+            <div className="flex mt-[-2rem] justify-center text-center ">
+              <DeleteTrashIcon />
+            </div>
+            <h2>Confirmation</h2>
+            <h2>Are you sure you want to delete this prior report?</h2>
+          </div>
         </DialogContent>
         <DialogActions>
           <AppButton
@@ -1155,6 +1316,7 @@ const SidePanel = () => {
             Cancel
           </AppButton>
           <AppButton
+            color="#539DF3"
             onClick={() => {
               handleDelete(deleteId);
               setShowDialog(false);

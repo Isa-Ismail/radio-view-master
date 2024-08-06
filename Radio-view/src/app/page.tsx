@@ -8,7 +8,11 @@ export default function Home() {
   const router = useRouter();
   const { userData } = useUserStore();
   useEffect(() => {
-    router.push("/clinician-view");
+    if (userData && Object.keys(userData).length > 0) {
+      router.push("/studies");
+    } else {
+      router.push("/clinician-login");
+    }
   }, [userData, router]);
 
   return null; // This component does not render anything

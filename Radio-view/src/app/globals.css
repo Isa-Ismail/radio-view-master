@@ -67,8 +67,9 @@ input:-webkit-autofill:active {
 }
 
 .footer {
-  background-color: var(--surface);
+  background-color: "black";
   width: 100%;
+  /* border-top: white 1px solid; */
   height: calc(var(--footer-height) + 20px);
   /* margin-top: auto; */
 }
