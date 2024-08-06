@@ -1,0 +1,17 @@
+{
+  "months_name": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "months_data": [0, 0, 0, 3, 0, 0, 3, 0, 10, 0, 0, 5]
+}

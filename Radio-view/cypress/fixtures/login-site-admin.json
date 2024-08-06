@@ -1,0 +1,26 @@
+{
+  "token": "site",
+  "refresh_token": "asdsa",
+  "User_Info": {
+    "date_of_birth": null,
+    "email": "test789@test.com",
+    "first_name": "test789",
+    "gender": "Male",
+    "hsai_guid": "8f63238a-d752-4b25-8e75-831f93ef5fd8",
+    "last_name": "",
+    "phone": "+923034599706",
+    "practice_address": null,
+    "practice_name": "Test",
+    "profile_type": "Personal",
+    "role": "SiteAdmin",
+    "site_address": "test@test2445.com",
+    "site_alias": "testtttttt",
+    "site_id": "3fa8a725-5a20-4fff-bed6-2e2a89f66c2e",
+    "site_name": "testttttttttttttttttttttttttttttt",
+    "system_alias": "DS",
+    "system_full_name": "Demo",
+    "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+    "user": "test789",
+    "userid": "7df2dbe6-17a3-4a55-b2ed-7e6135782e50"
+  }
+}

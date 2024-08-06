@@ -1,0 +1,23 @@
+{
+  "token": "system",
+  "refresh_token": "asdsa",
+  "User_Info": {
+    "userid": "e89e5567-022d-4e6b-8aac-c67c9a854c89",
+    "user": "demosystem",
+    "first_name": "demosystem",
+    "last_name": "",
+    "practice_name": "john doe",
+    "phone": "97873487328",
+    "date_of_birth": null,
+    "practice_address": null,
+    "profile_type": "Personal",
+    "email": "demosystem@aineurocare.com",
+    "gender": "Male",
+    "role": "SystemAdmin",
+    "hsai_guid": "c1634888-d7d3-4755-a148-8ee5cdca8093",
+    "system_id": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+    "system_full_name": "Demo",
+    "system_alias": "DS",
+    "system_address": "."
+  }
+}

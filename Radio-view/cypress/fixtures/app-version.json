@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "app_update_id": "037501a3-816c-4efe-97c4-10169d7f326e",
+      "appstore_review": "no",
+      "created_at": "2024-05-08T18:04:56.539332+00:00",
+      "description": "1. Fix loader issue on check update",
+      "force_update": "yes",
+      "playstore_review": "no",
+      "version": "1.1.62"
+    },
+    {
+      "app_update_id": "bb7e9077-17b5-41d1-a591-8a3ddcc5e035",
+      "appstore_review": "yes",
+      "created_at": "2024-05-06T13:12:44.420813+00:00",
+      "description": "Attention due to biometric implementation change you will have to login and register biometric again.\n1. Update biometric security",
+      "force_update": "yes",
+      "playstore_review": "no",
+      "version": "1.1.61"
+    },
+    {
+      "app_update_id": "d0e9560d-97da-4554-b0e6-9e1b9de9d3b6",
+      "appstore_review": "yes",
+      "created_at": "2024-05-03T17:27:47.421496+00:00",
+      "description": "1. Update privacy policy url",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.60"
+    },
+    {
+      "app_update_id": "bd0f81bc-d13a-4d71-b85b-4ca1b5d5de21",
+      "appstore_review": "yes",
+      "created_at": "2024-04-16T15:59:26.096619+00:00",
+      "description": "1. Fix network connectivity check\n2. Update ICH detection to avoid false positives\n3. Fix startup error.",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.58"
+    },
+    {
+      "app_update_id": "c6baaae8-2714-4624-997b-f58216d00f6e",
+      "appstore_review": "yes",
+      "created_at": "2024-03-30T09:06:08.508009+00:00",
+      "description": "1. Fix password change option",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.52"
+    },
+    {
+      "app_update_id": "66100a81-f0e7-442d-b2bd-9c7350c01f52",
+      "appstore_review": "yes",
+      "created_at": "2024-03-25T12:29:23.957788+00:00",
+      "description": "1. Improve study load time\n2. Fix keyboard not hiding after done searching.",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.51"
+    },
+    {
+      "app_update_id": "4bcd0594-cdfb-410a-a83a-dbe0abfdcf8e",
+      "appstore_review": "yes",
+      "created_at": "2024-03-15T20:21:25.822688+00:00",
+      "description": "1. Fix date and time filter typos",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.46"
+    },
+    {
+      "app_update_id": "41a3a7fa-e361-47ec-9bd9-f5a737bffb05",
+      "appstore_review": "yes",
+      "created_at": "2024-03-15T16:19:56.964121+00:00",
+      "description": "1. Improve date time filter.",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.45"
+    },
+    {
+      "app_update_id": "df638083-4dd2-4745-9f46-aab2b3ac56b0",
+      "appstore_review": "yes",
+      "created_at": "2024-03-15T06:00:29.99044+00:00",
+      "description": "1. Fix date time filters",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.44"
+    },
+    {
+      "app_update_id": "1b4d4625-0990-4938-88d3-05f52049c640",
+      "appstore_review": "yes",
+      "created_at": "2024-03-12T07:08:15.556823+00:00",
+      "description": "1. Fix notification issue.\n2. Improve the study loader.",
+      "force_update": "yes",
+      "playstore_review": "yes",
+      "version": "1.1.43"
+    }
+  ],
+  "count": 68
+}

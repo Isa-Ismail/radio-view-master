@@ -1,0 +1,19 @@
+{
+  "token": "super",
+  "refresh_token": "asdsa",
+  "User_Info": {
+    "userid": "8ebc8a5a-28b4-4ea4-a64e-9c190d8f1703",
+    "user": "neuroichsuperadmin",
+    "first_name": "NeuroICH Super Admin",
+    "last_name": "",
+    "practice_name": "superadmin",
+    "phone": "1234567890",
+    "date_of_birth": "1990-05-02",
+    "practice_address": "123 Main St",
+    "profile_type": "Personal",
+    "email": "superadmin@aineurocare.com",
+    "gender": "Male",
+    "role": "SuperAdmin",
+    "hsai_guid": "8ebc8a5a-28b4-4ea4-a64e-9c190d8f1703"
+  }
+}

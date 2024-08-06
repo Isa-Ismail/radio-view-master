@@ -1,0 +1,37 @@
+{
+  "hsai_sites": [
+    {
+      "system": "Demo",
+      "sites": [
+        {
+          "site_id": "64957965-a8a5-4d8d-a77d-aae1443d7b71",
+          "site_name": "testttttttttttttttttttt"
+        },
+        {
+          "site_id": "3fa8a725-5a20-4fff-bed6-2e2a89f66c2e",
+          "site_name": "testttttttttttttttttttttttttttttt"
+        },
+        {
+          "site_id": "bc37b5da-4639-424d-8b36-7d648c5367c4",
+          "site_name": "MYMYMY"
+        },
+        {
+          "site_id": "73b9290c-6cf6-4a9f-a7e9-b2dbee50a367",
+          "site_name": "My nameTEST"
+        },
+        {
+          "site_id": "c91c58be-9ee8-4197-8dee-28f3b31e57aa",
+          "site_name": "test"
+        },
+        {
+          "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+          "site_name": "External DemoSite"
+        },
+        {
+          "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+          "site_name": "Internal DemoSite"
+        }
+      ]
+    }
+  ]
+}

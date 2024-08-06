@@ -1,0 +1,235 @@
+{
+  "hsai_users": [
+    {
+      "hsai_guid": "b9b403b5-916b-477e-950c-6569a9792dc0",
+      "hsai_id": 524,
+      "user": "jikalob158@losvtn.com",
+      "hsai_system": {
+        "system_guid": "2a1f8e1d-722f-457b-a64e-d7bf3e113e3a",
+        "system_full_name": "Test System Integration test",
+        "system_alias": "ZHKH",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "jikalob158@losvtn.com",
+            "first_name": "jikalob158",
+            "phone": "+92432543543",
+            "profile_id": "3d13a5f2-3ae0-4cda-821d-22093d120c3d",
+            "last_name": "",
+            "practice_name": "Ziaddin hospital karachi"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "9209559a-13b0-4ae9-b913-c0651bcee6f3",
+      "hsai_id": 523,
+      "user": "yogaxo9692@rencr.com",
+      "hsai_system": {
+        "system_guid": "263e5e1d-f1a3-4cd3-b1c7-92a2a509e656",
+        "system_full_name": "Ziaddin hospital karachi",
+        "system_alias": "ZHKH",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "yogaxo9692@rencr.com",
+            "first_name": "yogaxo9692",
+            "phone": "+92432543543",
+            "profile_id": "d4a914bf-9a30-4d3e-b8ac-53a7c34ef81d",
+            "last_name": "",
+            "practice_name": "Ziaddin hospital karachi"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "f3b3ebee-74e0-412a-95a0-6f5191ddfc4e",
+      "hsai_id": 522,
+      "user": "sonepa606@losvtn.com",
+      "hsai_system": {
+        "system_guid": "f0734f6d-7b8b-40c6-912b-212721ce6db7",
+        "system_full_name": "Ziaddin hospital karachi",
+        "system_alias": "ZHKH",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "sonepa606@losvtn.com",
+            "first_name": "sonepa606",
+            "phone": "+92432543543",
+            "profile_id": "2479c5f7-fef0-499b-b93a-f1adcc442ba1",
+            "last_name": "",
+            "practice_name": "Ziaddin hospital karachi"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "52a3593d-8b7d-4a4d-b05c-977f4c376836",
+      "hsai_id": 520,
+      "user": "sonepa6068@losvtn.com",
+      "hsai_system": {
+        "system_guid": "b408e93d-7dc3-413d-ab3c-19cabdfd0516",
+        "system_full_name": "test",
+        "system_alias": "test",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "sonepa6068@losvtn.com",
+            "first_name": "sonepa6068",
+            "phone": "+12025550115",
+            "profile_id": "8753860f-35db-45f9-991f-68722d97dd94",
+            "last_name": "",
+            "practice_name": "test"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "7a8d3219-532c-462e-9cd7-89404a590b5c",
+      "hsai_id": 518,
+      "user": "xadeha1532@bsomek.com",
+      "hsai_system": {
+        "system_guid": "d11251c7-fb26-4737-948b-a729cb4bf169",
+        "system_full_name": "dsadasd",
+        "system_alias": "asd",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "xadeha1532@bsomek.com",
+            "first_name": "xadeha1532",
+            "phone": "+244132143131",
+            "profile_id": "87ff3a93-7300-4e08-8155-f36288be612e",
+            "last_name": "",
+            "practice_name": "sadfsadaa"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "d6ada4c7-9e0c-49c3-84a1-48c41840bb46",
+      "hsai_id": 514,
+      "user": "motexo2699@ahieh.com",
+      "hsai_system": {
+        "system_guid": "f5fafd4d-58f4-4f3a-93a5-11b0dae0632d",
+        "system_full_name": "asds",
+        "system_alias": "asdsd",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "motexo2699@ahieh.com",
+            "first_name": "motexo2699",
+            "phone": "+880232234343",
+            "profile_id": "313c76ea-afe1-4bb2-8ac3-4991d4d9c3fd",
+            "last_name": "",
+            "practice_name": "asdsada"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "6bb05814-bf49-49df-ae36-28ebf357d582",
+      "hsai_id": 513,
+      "user": "sdsa@a.cim",
+      "hsai_system": {
+        "system_guid": "749d3db2-bfc9-4b18-8312-607bdbbd9c74",
+        "system_full_name": "asdsas",
+        "system_alias": "sdsadsa",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "sdsa@a.cim",
+            "first_name": "sdsa",
+            "phone": "+37443434334",
+            "profile_id": "ec9b0f4a-cc3f-4368-a5ef-030027fd3c06",
+            "last_name": "",
+            "practice_name": "asdasda"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "f379879c-016b-4a04-9b89-d415620aa406",
+      "hsai_id": 490,
+      "user": "datev29528@deligy.com",
+      "hsai_system": {
+        "system_guid": "bc2cef34-1d96-49e3-a382-011b504e46a7",
+        "system_full_name": "IntegrationTestSystem",
+        "system_alias": "ITS",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "datev29528@deligy.com",
+            "first_name": "datev29528",
+            "phone": "+12143432123",
+            "profile_id": "3d534a67-5f9c-44d2-975b-433b6556cbd3",
+            "last_name": "",
+            "practice_name": "asasd"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "7579320b-b689-4394-a8c6-3e4f51f1230c",
+      "hsai_id": 473,
+      "user": "test-606015@example.com",
+      "hsai_system": {
+        "system_guid": "33a41c55-b8da-4c53-8d61-cafac6987fde",
+        "system_full_name": "Test System Integration test 111111",
+        "system_alias": "TSIN",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "test-606015@example.com",
+            "first_name": "test-606015",
+            "phone": "+15203780407",
+            "profile_id": "945d1250-83ea-4d5f-927e-60376a40fd39",
+            "last_name": "",
+            "practice_name": "Test User 753153"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "ffff391e-127b-438f-9273-3ce6d78de45f",
+      "hsai_id": 432,
+      "user": "secoho8913@em2lab.com",
+      "hsai_system": {
+        "system_guid": "952b26da-2c1d-4ddb-904b-74761b7cf954",
+        "system_full_name": "Usability",
+        "system_alias": "UTS",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "secoho8913@em2lab.com",
+            "first_name": "secoho8913",
+            "phone": "+88012341234",
+            "profile_id": "937a5755-49a6-4619-a9f9-9376c4a40d4b",
+            "last_name": "",
+            "practice_name": "secoho8913"
+          }
+        }
+      ]
+    }
+  ],
+  "count": 35
+}

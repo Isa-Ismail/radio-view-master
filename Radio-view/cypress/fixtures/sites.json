@@ -1,0 +1,312 @@
+{
+  "hsai_sites": [
+    {
+      "site_id": "9293807b-7474-4d24-a991-8f2b19398fb2",
+      "site_name": "Test Site Integration test 635390",
+      "site_alias": "TSIN",
+      "site_address": "Test Address 550501",
+      "site_country": "United States",
+      "site_city": "Los Angeles",
+      "site_state": "California",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "16000f89-f692-4a8f-8e83-2c8c92ca0822",
+            "system_full_name": "Rawalpindi Medical University",
+            "system_alias": "RMU"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "test-189783@example.com",
+        "hsai_guid": "66e33c3a-3248-48e8-9379-c07c7d1e10f0",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "test-189783@example.com",
+              "first_name": "test-189783",
+              "phone": "+15203780407",
+              "profile_id": "35a7fcd5-e30e-46a0-927b-a93daa3a5c55",
+              "last_name": "",
+              "practice_name": "Test User 971712"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "64957965-a8a5-4d8d-a77d-aae1443d7b71",
+      "site_name": "testttttttttttttttttttt",
+      "site_alias": "testttt",
+      "site_address": "test@test2445.com",
+      "site_country": "United Arab Emirates",
+      "site_city": "Dubai",
+      "site_state": "Dubai",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo",
+            "system_alias": "DS"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "test789433454@test.com",
+        "hsai_guid": "dc8a656b-1383-4988-b7a3-597a928ca67a",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "test789433454@test.com",
+              "first_name": "test789433454",
+              "phone": "+923034599706",
+              "profile_id": "23abf190-5900-4cdc-9c60-2e5ac5316ce9",
+              "last_name": "",
+              "practice_name": "Rai Ali Nawazn"
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "site_id": "0ae49c75-9c7b-44be-bdba-07c525110c4c",
+      "site_name": "TesgingSit",
+      "site_alias": "TS",
+      "site_address": "asdfg",
+      "site_country": "United Arab Emirates",
+      "site_city": "Ajman",
+      "site_state": "Ajman Emirate",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "0da10a1e-3a98-4feb-bf47-5cdd48f979fd",
+            "system_full_name": "Usability Test System",
+            "system_alias": "UTS"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "docojaw465@funvane.com",
+        "hsai_guid": "9dcfb445-35ae-4f51-8cd2-48881878efd8",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "docojaw465@funvane.com",
+              "first_name": "docojaw465",
+              "phone": "+312312412341",
+              "profile_id": "7b938007-3988-4203-bbd2-ed9524c3a926",
+              "last_name": "",
+              "practice_name": "asasd"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "f0db9934-2b8e-4879-9ef7-ec5c2ec99e01",
+      "site_name": "Usability Test Site",
+      "site_alias": "UTS",
+      "site_address": "asdsdads",
+      "site_country": "Andorra",
+      "site_city": "Andorra la Vella",
+      "site_state": "Andorra la Vella",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "952b26da-2c1d-4ddb-904b-74761b7cf954",
+            "system_full_name": "Usability",
+            "system_alias": "UTS"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "fepote9076@dxice.com",
+        "hsai_guid": "6a02f533-e3c3-482c-9498-509fc9150f0b",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "fepote9076@dxice.com",
+              "first_name": "fepote9076",
+              "phone": "+8801613435342",
+              "profile_id": "a876214c-1e1b-4ff4-9027-ddafa9d02e7a",
+              "last_name": "",
+              "practice_name": "fepote9076"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "ca83df69-3188-42f6-8d29-2e73024e30df",
+      "site_name": "asdsad",
+      "site_alias": "asdasd",
+      "site_address": "asdasd",
+      "site_country": "Andorra",
+      "site_city": "Canillo",
+      "site_state": "Canillo",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "9e9aa84d-4019-4eba-a5b9-3a86a1508fd3",
+            "system_full_name": "asdsad",
+            "system_alias": "asdsa"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "detagem853@buzblox.com",
+        "hsai_guid": "ea596720-c241-4cf0-b084-45ae457bac5d",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "detagem853@buzblox.com",
+              "first_name": "detagem853",
+              "phone": "+232435341254",
+              "profile_id": "0108d5fd-ae1c-4ace-94e3-d6c589eadbfd",
+              "last_name": "",
+              "practice_name": "asdsad"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "56262baa-e6db-47d7-a275-f13bbaa31250",
+      "site_name": "Usability Test Site",
+      "site_alias": "UTS",
+      "site_address": "asdsdsd",
+      "site_country": "Andorra",
+      "site_city": "Canillo",
+      "site_state": "Canillo",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "0da10a1e-3a98-4feb-bf47-5cdd48f979fd",
+            "system_full_name": "Usability Test System",
+            "system_alias": "UTS"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "hebogoj866@funvane.com",
+        "hsai_guid": "72992b6e-90e7-44f4-b8df-001100ad7b5d",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "hebogoj866@funvane.com",
+              "first_name": "hebogoj866",
+              "phone": "+4351243525353",
+              "profile_id": "a7a841f5-ef24-427a-940c-e4ca18537a0b",
+              "last_name": "",
+              "practice_name": "hebogoj866"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "e3c9353a-4ffc-4a7c-8ccd-2e2fed0e52ad",
+      "site_name": "testttttttt",
+      "site_alias": "test",
+      "site_address": "testYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+      "site_country": "Albania",
+      "site_city": "TESTTTTTTTTTTTT",
+      "site_state": "Devoll District",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "3365113b-9e97-4473-82eb-412488cf0e21",
+            "system_full_name": "Sarwar Foundation Hospital ",
+            "system_alias": "SFH"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "testtt7899999@test.com",
+        "hsai_guid": "d706cd92-e8b0-4f8b-bdb8-566a56ce16a6",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "testtt7899999@test.com",
+              "first_name": "testtt7899999",
+              "phone": "+923034599706",
+              "profile_id": "811c3964-d940-4fa9-bdb1-cf43389007fc",
+              "last_name": "",
+              "practice_name": "Rai Ali Nawazn"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "3fa8a725-5a20-4fff-bed6-2e2a89f66c2e",
+      "site_name": "testttttttttttttttttttttttttttttt",
+      "site_alias": "testtttttt",
+      "site_address": "test@test2445.com",
+      "site_country": "Antigua and Barbuda",
+      "site_city": "testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
+      "site_state": "Saint Paul Parish",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo",
+            "system_alias": "DS"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "test789@test.com",
+        "hsai_guid": "8f63238a-d752-4b25-8e75-831f93ef5fd8",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "test789@test.com",
+              "first_name": "test789",
+              "phone": "+923034599706",
+              "profile_id": "827ab3dc-0f4e-4a6c-b4e4-31e2f6d7f575",
+              "last_name": "",
+              "practice_name": "Test"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "site_id": "95a2e1a9-fc0e-42d9-bbab-44df3a05be1f",
+      "site_name": "asdsaasdsadasdsadasdsadasdsad",
+      "site_alias": "asdasdsad",
+      "site_address": "asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsaasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadd",
+      "site_country": "United Arab Emirates",
+      "site_city": "Ajman",
+      "site_state": "Ajman Emirate",
+      "hsai_site_to_system_mappings": [
+        {
+          "hsai_system": {
+            "system_guid": "516754bf-a1cd-44be-9994-91c443dc3859",
+            "system_full_name": "Sadia Test System",
+            "system_alias": "STT"
+          }
+        }
+      ],
+      "hsai_user": {
+        "user": "ismailalam@neurocare.ai",
+        "hsai_guid": "f968ae59-82d0-4652-a3b6-cddf80b60bed",
+        "hsai_user_to_profile_mappings": [
+          {
+            "hsai_user_profile": {
+              "email": "ismailalam@neurocare.ai",
+              "first_name": "ismailalam",
+              "phone": "+12321312312",
+              "profile_id": "e11d910f-b576-4be8-af8a-c4cfefd8eebf",
+              "last_name": "",
+              "practice_name": "asdsadaasdsadasdsadasdsadasdsadasdsadasdsad"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "count": 26
+}

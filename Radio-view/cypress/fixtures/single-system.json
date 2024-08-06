@@ -1,0 +1,28 @@
+{
+  "hsai_users": [
+    {
+      "hsai_guid": "23ca24ac-5f52-4dfc-8036-323d5f481814",
+      "hsai_id": 526,
+      "user": "texof50098@ahieh.com",
+      "hsai_system": {
+        "system_guid": "932b3791-9ad9-4a45-bae4-8d3451b76657",
+        "system_full_name": "Mailing Test",
+        "system_alias": "MT",
+        "system_address": "."
+      },
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "texof50098@ahieh.com",
+            "first_name": "texof50098",
+            "phone": "+41235132123",
+            "profile_id": "2547a51d-cb4d-4f00-8e3d-27d6488cd6fe",
+            "last_name": "",
+            "practice_name": "gasdasd"
+          }
+        }
+      ]
+    }
+  ],
+  "count": 36
+}

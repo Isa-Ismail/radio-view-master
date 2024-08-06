@@ -1,0 +1,220 @@
+{
+  "logs": [
+    {
+      "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+      "site_name": "External DemoSite",
+      "site_alias": "Demo",
+      "site_address": "123 street",
+      "service_logs": [],
+      "last_study": {
+        "study_date": "2023-12-30",
+        "study_time": "181049",
+        "patient_name": "Ethan"
+      }
+    },
+    {
+      "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+      "site_name": "Internal DemoSite",
+      "site_alias": "DemoINT",
+      "site_address": "123 street",
+      "service_logs": [],
+      "last_study": {
+        "study_date": "2022-12-09",
+        "study_time": "125500.000",
+        "patient_name": "AKHTAR HUSSAIN"
+      }
+    },
+    {
+      "site_id": "c65d571b-deac-4a1c-90e8-9431e79dfdca",
+      "site_name": "Sarwar foundation site",
+      "site_alias": "SFS",
+      "site_address": "rajana",
+      "service_logs": [],
+      "last_study": {
+        "study_date": "2023-12-21",
+        "study_time": "101647",
+        "patient_name": "IJAZ"
+      }
+    },
+    {
+      "site_id": "8b576878-e502-4d29-b899-e2f27aff47a0",
+      "site_name": "Holy Family Hospital",
+      "site_alias": "HFH",
+      "site_address": "J329+WJ2, Tipu Rd, Chamanzar Colony, Rawalpindi, Punjab 46000",
+      "service_logs": [],
+      "last_study": {
+        "study_date": "2023-12-30",
+        "study_time": "171957",
+        "patient_name": "MUHAMMAD SHAHID^^^^"
+      }
+    },
+    {
+      "site_id": "6c2da7eb-263a-4152-a937-098b7f8edd54",
+      "site_name": "TestSiteIsmail",
+      "site_alias": "TSI",
+      "site_address": "asdjasndasn a",
+      "service_logs": []
+    },
+    {
+      "site_id": "5bdcc21c-30af-401a-94cb-e07339e1d8e5",
+      "site_name": "Testing Site Hospital",
+      "site_alias": "TSH",
+      "site_address": "lahore",
+      "service_logs": []
+    },
+    {
+      "site_id": "7840bf29-bf8a-45f8-bbc6-338de2bda066",
+      "site_name": "Testing Hospital karachi",
+      "site_alias": "JNH",
+      "site_address": "karachi",
+      "service_logs": []
+    },
+    {
+      "site_id": "0d667d9e-58fc-4100-9912-5d818ee423a7",
+      "site_name": "Al-Madina Diagnostics Site",
+      "site_alias": "AMD",
+      "site_address": "Gojra",
+      "service_logs": []
+    },
+    {
+      "site_id": "b9ae4983-f95f-4d34-b32f-ce4e6d7c7877",
+      "site_name": "Testing Site",
+      "site_alias": "TS1",
+      "site_address": "Dhaka, Bangladesh",
+      "service_logs": []
+    },
+    {
+      "site_id": "e0ba7a72-efd0-4af4-b37c-6c40497dbffa",
+      "site_name": "My name",
+      "site_alias": "testD",
+      "site_address": "54770",
+      "service_logs": []
+    },
+    {
+      "site_id": "e41c307d-57d5-474b-a74b-cba2595e73b1",
+      "site_name": "restt38udj",
+      "site_alias": "test",
+      "site_address": "test837eh",
+      "service_logs": []
+    },
+    {
+      "site_id": "8a28f258-2239-4a3b-8abb-ce845527b96d",
+      "site_name": "Sadia Mazhar Site",
+      "site_alias": "SMS",
+      "site_address": "asdsad",
+      "service_logs": []
+    },
+    {
+      "site_id": "c91c58be-9ee8-4197-8dee-28f3b31e57aa",
+      "site_name": "test",
+      "site_alias": "test",
+      "site_address": "test@test2445.com",
+      "service_logs": []
+    },
+    {
+      "site_id": "73b9290c-6cf6-4a9f-a7e9-b2dbee50a367",
+      "site_name": "My nameTEST",
+      "site_alias": "test",
+      "site_address": "testtest@test2445.com",
+      "service_logs": []
+    },
+    {
+      "site_id": "bc37b5da-4639-424d-8b36-7d648c5367c4",
+      "site_name": "MYMYMY",
+      "site_alias": "MYMYMY",
+      "site_address": "MYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMY",
+      "service_logs": []
+    },
+    {
+      "site_id": "4df84af0-bef6-42b0-8bd4-8da4c4fea7aa",
+      "site_name": "Testing Reset",
+      "site_alias": "TRS",
+      "site_address": "asdsadasd",
+      "service_logs": []
+    },
+    {
+      "site_id": "74225c23-d501-4ad9-b114-3a5fb60edb75",
+      "site_name": "Mohammad Shoaib",
+      "site_alias": "MS",
+      "site_address": "karachi",
+      "service_logs": []
+    },
+    {
+      "site_id": "426444c4-0b09-4d36-93b9-45e67e9aa16b",
+      "site_name": "testingblabla",
+      "site_alias": "TS",
+      "site_address": "asdasdasd",
+      "service_logs": []
+    },
+    {
+      "site_id": "95a2e1a9-fc0e-42d9-bbab-44df3a05be1f",
+      "site_name": "asdsaasdsadasdsadasdsadasdsad",
+      "site_alias": "asdasdsad",
+      "site_address": "asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsaasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadd",
+      "service_logs": []
+    },
+    {
+      "site_id": "3fa8a725-5a20-4fff-bed6-2e2a89f66c2e",
+      "site_name": "testttttttttttttttttttttttttttttt",
+      "site_alias": "testtttttt",
+      "site_address": "test@test2445.com",
+      "service_logs": []
+    },
+    {
+      "site_id": "e3c9353a-4ffc-4a7c-8ccd-2e2fed0e52ad",
+      "site_name": "testttttttt",
+      "site_alias": "test",
+      "site_address": "testYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+      "service_logs": []
+    },
+    {
+      "site_id": "56262baa-e6db-47d7-a275-f13bbaa31250",
+      "site_name": "Usability Test Site",
+      "site_alias": "UTS",
+      "site_address": "asdsdsd",
+      "service_logs": []
+    },
+    {
+      "site_id": "ca83df69-3188-42f6-8d29-2e73024e30df",
+      "site_name": "asdsad",
+      "site_alias": "asdasd",
+      "site_address": "asdasd",
+      "service_logs": []
+    },
+    {
+      "site_id": "f0db9934-2b8e-4879-9ef7-ec5c2ec99e01",
+      "site_name": "Usability Test Site",
+      "site_alias": "UTS",
+      "site_address": "asdsdads",
+      "service_logs": []
+    },
+    {
+      "site_id": "0ae49c75-9c7b-44be-bdba-07c525110c4c",
+      "site_name": "TesgingSit",
+      "site_alias": "TS",
+      "site_address": "asdfg",
+      "service_logs": []
+    },
+    {
+      "site_id": "9293807b-7474-4d24-a991-8f2b19398fb2",
+      "site_name": "Test Site Integration test 635390",
+      "site_alias": "TSIN",
+      "site_address": "Test Address 550501",
+      "service_logs": []
+    },
+    {
+      "site_id": "be3c4360-c112-4684-bf39-d7ec1c21860c",
+      "site_name": "Test Site Integration test 755512",
+      "site_alias": "TSIN",
+      "site_address": "Test Address 552030",
+      "service_logs": []
+    },
+    {
+      "site_id": "64957965-a8a5-4d8d-a77d-aae1443d7b71",
+      "site_name": "testttttttttttttttttttt",
+      "site_alias": "testttt",
+      "site_address": "test@test2445.com",
+      "service_logs": []
+    }
+  ]
+}

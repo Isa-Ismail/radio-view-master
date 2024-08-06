@@ -1,0 +1,1091 @@
+{
+  "hsai_users": [
+    {
+      "hsai_guid": "e107a96d-5a56-494c-b524-b182fa30c688",
+      "hsai_id": 412,
+      "created_at": "2024-04-25T11:57:04.218687+00:00",
+      "role": "Clinician",
+      "user": "jehanzebkhannnnnn@neurocare.ai",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "jehanzebkhannnnnn@neurocare.ai",
+            "first_name": "Integration Test Clinician",
+            "last_name": "test23456789",
+            "gender": "Male",
+            "date_of_birth": "2003-04-24",
+            "created_at": "2024-04-25T11:57:04.232819+00:00",
+            "phone": "+923034599706",
+            "practice_address": "lhrhr",
+            "practice_name": "MyMyMyMyMy",
+            "profile_id": "85ee3cd5-9a31-4ac2-9373-124dd205ef28",
+            "profile_type": "Personal",
+            "updated_at": "2024-05-13T06:42:32.552968+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "asdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsaasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadasdsadd",
+            "site_alias": "asdasdsad",
+            "site_id": "95a2e1a9-fc0e-42d9-bbab-44df3a05be1f",
+            "site_name": "asdsaasdsadasdsadasdsadasdsad",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sadia Test System"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "asdasdasd",
+            "site_alias": "TS",
+            "site_id": "426444c4-0b09-4d36-93b9-45e67e9aa16b",
+            "site_name": "testingblabla",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sadia Test System"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "asdsad",
+            "site_alias": "SMS",
+            "site_id": "8a28f258-2239-4a3b-8abb-ce845527b96d",
+            "site_name": "Sadia Mazhar Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sadia Test System"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "karachi",
+            "site_alias": "MS",
+            "site_id": "74225c23-d501-4ad9-b114-3a5fb60edb75",
+            "site_name": "Mohammad Shoaib",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "asdsadasd",
+            "site_alias": "TRS",
+            "site_id": "4df84af0-bef6-42b0-8bd4-8da4c4fea7aa",
+            "site_name": "Testing Reset",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "karachi",
+            "site_alias": "JNH",
+            "site_id": "7840bf29-bf8a-45f8-bbc6-338de2bda066",
+            "site_name": "Testing Hospital karachi",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sarwar Foundation Hospital "
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "J329+WJ2, Tipu Rd, Chamanzar Colony, Rawalpindi, Punjab 46000",
+            "site_alias": "HFH",
+            "site_id": "8b576878-e502-4d29-b899-e2f27aff47a0",
+            "site_name": "Holy Family Hospital",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "MYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMYMY",
+            "site_alias": "MYMYMY",
+            "site_id": "bc37b5da-4639-424d-8b36-7d648c5367c4",
+            "site_name": "MYMYMY",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "testtest@test2445.com",
+            "site_alias": "test",
+            "site_id": "73b9290c-6cf6-4a9f-a7e9-b2dbee50a367",
+            "site_name": "My nameTEST",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "test@test2445.com",
+            "site_alias": "test",
+            "site_id": "c91c58be-9ee8-4197-8dee-28f3b31e57aa",
+            "site_name": "test",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "Dhaka, Bangladesh",
+            "site_alias": "TS1",
+            "site_id": "b9ae4983-f95f-4d34-b32f-ce4e6d7c7877",
+            "site_name": "Testing Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "TestingSystem"
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "testnew123"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "Dhaka, Bangladesh",
+            "site_alias": "TS1",
+            "site_id": "b9ae4983-f95f-4d34-b32f-ce4e6d7c7877",
+            "site_name": "Testing Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "TestingSystem"
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "testnew123"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "Gojra",
+            "site_alias": "AMD",
+            "site_id": "0d667d9e-58fc-4100-9912-5d818ee423a7",
+            "site_name": "Al-Madina Diagnostics Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Al-Madina Diagnostics Gojra"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "karachi",
+            "site_alias": "JNH",
+            "site_id": "7840bf29-bf8a-45f8-bbc6-338de2bda066",
+            "site_name": "Testing Hospital karachi",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sarwar Foundation Hospital "
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "rajana",
+            "site_alias": "SFS",
+            "site_id": "c65d571b-deac-4a1c-90e8-9431e79dfdca",
+            "site_name": "Sarwar foundation site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Sarwar Foundation Hospital "
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "lahore",
+            "site_alias": "TSH",
+            "site_id": "5bdcc21c-30af-401a-94cb-e07339e1d8e5",
+            "site_name": "Testing Site Hospital",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Production Testing Hospital"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "asdjasndasn a",
+            "site_alias": "TSI",
+            "site_id": "6c2da7eb-263a-4152-a937-098b7f8edd54",
+            "site_name": "TestSiteIsmail",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "TestSystemIsmail"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "RMU",
+            "system_guid": "16000f89-f692-4a8f-8e83-2c8c92ca0822",
+            "system_full_name": "Rawalpindi Medical University"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "SFH",
+            "system_guid": "3365113b-9e97-4473-82eb-412488cf0e21",
+            "system_full_name": "Sarwar Foundation Hospital "
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "MST",
+            "system_guid": "dde0e461-5dd3-453b-8a6c-7e3d88738b20",
+            "system_full_name": "MultiSiteTest"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "TSI",
+            "system_guid": "98cfa97c-cf8e-47ab-9d02-742abea6db6b",
+            "system_full_name": "TestSystemIsmail"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "PTH",
+            "system_guid": "02ce6937-a179-4ef3-bf6d-2a02ba11a2a8",
+            "system_full_name": "Production Testing Hospital"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "PS",
+            "system_guid": "9eec54a6-7311-40e5-a9ef-cca2307ca599",
+            "system_full_name": "Production System"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "AMD",
+            "system_guid": "acfd6afb-64d3-4037-927b-1439fce5ff19",
+            "system_full_name": "Al-Madina Diagnostics Gojra"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "TS",
+            "system_guid": "8fd415bf-9420-4e44-bc35-dd0e874036d0",
+            "system_full_name": "TestingSystem"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "TS1",
+            "system_guid": "9f8a0732-b01d-41d9-98fc-363263553e8e",
+            "system_full_name": "TestingSystem1"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "S1",
+            "system_guid": "5c024874-1d18-48e0-b705-347286f110cb",
+            "system_full_name": "System1"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "PS",
+            "system_guid": "d5b333d7-ef8d-410c-ae7a-2cc72b1ac334",
+            "system_full_name": "Production System"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "zh",
+            "system_guid": "092eb184-6f8d-4aa1-945d-2ed4e51b66e1",
+            "system_full_name": "ziauddin"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "TEST12",
+            "system_guid": "1b762231-7359-4d68-9422-67819f87279a",
+            "system_full_name": "TestingSystem12"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "SIUT",
+            "system_guid": "c3c58dc0-09e1-4cf2-9018-deb643ce65ed",
+            "system_full_name": "Sindh Institute of Urology and Transplantation"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "JH",
+            "system_guid": "35a024a1-aac3-4139-a6f5-85b603986c66",
+            "system_full_name": "Jinnah hospiatl"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "123a",
+            "system_guid": "66cd5eaa-1a0e-47b1-958f-3da176766753",
+            "system_full_name": "testnew123"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "APT",
+            "system_guid": "6d550f1a-5a9e-4631-99b6-9627c21ad52b",
+            "system_full_name": "ApiTest"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "test",
+            "system_guid": "0c800e88-9c52-4563-b916-612df26079d2",
+            "system_full_name": "test"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "STT",
+            "system_guid": "516754bf-a1cd-44be-9994-91c443dc3859",
+            "system_full_name": "Sadia Test System"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "TESTTTTTTT",
+            "system_guid": "53fa92bc-5a0a-4302-8450-7efc767ad757",
+            "system_full_name": "TESTTTTTTTTT"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "49a0a03c-b4c4-4dc2-8406-dacbc679a799",
+      "hsai_id": 304,
+      "created_at": "2024-01-18T07:49:19.711034+00:00",
+      "role": "Clinician",
+      "user": "test123@test.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "test123@test.com",
+            "first_name": "testnew123",
+            "last_name": "testnew123",
+            "gender": "Male",
+            "date_of_birth": "2003-01-22",
+            "created_at": "2024-01-18T07:49:19.747833+00:00",
+            "phone": "+923034599706",
+            "practice_address": "asdsaddassda",
+            "practice_name": "testnew123",
+            "profile_id": "054e1b90-1678-4932-b172-c2942a8d3f8b",
+            "profile_type": "Personal",
+            "updated_at": "2024-04-24T11:05:19.335515+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "Dhaka, Bangladesh",
+            "site_alias": "TS1",
+            "site_id": "b9ae4983-f95f-4d34-b32f-ce4e6d7c7877",
+            "site_name": "Testing Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "TestingSystem"
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "testnew123"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "123a",
+            "system_guid": "66cd5eaa-1a0e-47b1-958f-3da176766753",
+            "system_full_name": "testnew123"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "3fb20b38-c7b9-415c-beb7-3e94569e3d6b",
+      "hsai_id": 289,
+      "created_at": "2024-01-01T06:12:47.070985+00:00",
+      "role": "Clinician",
+      "user": "ismailbackup15@gmail.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "ismailbackup15@gmail.com",
+            "first_name": "Testing1",
+            "last_name": "123",
+            "gender": "Male",
+            "date_of_birth": "2002-07-26",
+            "created_at": "2024-01-01T06:12:47.180097+00:00",
+            "phone": "+8801715956363",
+            "practice_address": "South Goran Dhaka, Bangladesh",
+            "practice_name": "qasdads",
+            "profile_id": "79008e21-3dd1-471c-a38b-1236da39b0ab",
+            "profile_type": "Personal",
+            "updated_at": "2024-04-03T06:58:45.941984+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "Dhaka, Bangladesh",
+            "site_alias": "TS1",
+            "site_id": "b9ae4983-f95f-4d34-b32f-ce4e6d7c7877",
+            "site_name": "Testing Site",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "TestingSystem"
+                }
+              },
+              {
+                "hsai_system": {
+                  "system_full_name": "testnew123"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "J329+WJ2, Tipu Rd, Chamanzar Colony, Rawalpindi, Punjab 46000",
+            "site_alias": "HFH",
+            "site_id": "8b576878-e502-4d29-b899-e2f27aff47a0",
+            "site_name": "Holy Family Hospital",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "RMU",
+            "system_guid": "16000f89-f692-4a8f-8e83-2c8c92ca0822",
+            "system_full_name": "Rawalpindi Medical University"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "SFH",
+            "system_guid": "3365113b-9e97-4473-82eb-412488cf0e21",
+            "system_full_name": "Sarwar Foundation Hospital "
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "08e1d9ec-e3f4-4e7f-a9e4-45581b18b8db",
+      "hsai_id": 106,
+      "created_at": "2023-11-03T11:45:05.897898+00:00",
+      "role": "Clinician",
+      "user": "rabiyafarooq@aineurocare.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "rabiyafarooq@aineurocare.com",
+            "first_name": "Rabiya",
+            "last_name": "Farooq",
+            "gender": "Female",
+            "date_of_birth": "1993-09-05",
+            "created_at": "2023-11-03T11:45:05.97226+00:00",
+            "phone": "+923315564854",
+            "practice_address": "DHA 2 ",
+            "practice_name": "Rabiya",
+            "profile_id": "881ef083-cd45-45e8-af83-35a25deca1cd",
+            "profile_type": "Personal",
+            "updated_at": "2023-11-03T12:45:06.187364+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "d64e5acc-e1e9-4886-8dd0-8582aea8d6ed",
+      "hsai_id": 94,
+      "created_at": "2023-10-11T09:19:21.361671+00:00",
+      "role": "Clinician",
+      "user": "sarwarfoundation148@gmail.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "sarwarfoundation148@gmail.com",
+            "first_name": "Sarwar",
+            "last_name": "Foundation",
+            "gender": "Male",
+            "date_of_birth": "1990-05-02",
+            "created_at": "2023-10-11T09:19:21.45111+00:00",
+            "phone": "+923284394938",
+            "practice_address": "123 Main St 224",
+            "practice_name": "Dr Sarwar",
+            "profile_id": "0bc312e2-6875-4ae1-9631-bfc2f54b1926",
+            "profile_type": "Personal",
+            "updated_at": "2024-04-03T07:00:59.725488+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "40f4baa2-0734-4914-b7e9-3c0d31f7115a",
+      "hsai_id": 93,
+      "created_at": "2023-10-11T09:14:05.078277+00:00",
+      "role": "Clinician",
+      "user": "umerqader@icloud.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "umerqader@icloud.com",
+            "first_name": "Umer",
+            "last_name": "Qadeer",
+            "gender": "Male",
+            "date_of_birth": "1990-05-02",
+            "created_at": "2023-10-11T09:14:05.164862+00:00",
+            "phone": "+1234567890",
+            "practice_address": "123 Main St 224",
+            "practice_name": "Dr Umer",
+            "profile_id": "f09a2391-f549-4259-b519-dd10cdc9dfb8",
+            "profile_type": "Personal",
+            "updated_at": "2023-10-11T10:14:05.320447+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "488f51a5-f746-4f0f-aaeb-2aba05aa3b56",
+      "hsai_id": 78,
+      "created_at": "2023-10-03T14:26:06.317851+00:00",
+      "role": "Clinician",
+      "user": "rmuclinician@aineurocare.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "rmuclinician@aineurocare.com",
+            "first_name": "Dr ",
+            "last_name": "Nasir",
+            "gender": "Male",
+            "date_of_birth": "1993-10-04",
+            "created_at": "2023-10-03T14:26:06.402343+00:00",
+            "phone": "9248973285",
+            "practice_address": "rawalpindi",
+            "practice_name": "Dr nasir",
+            "profile_id": "96b8d1e2-fec4-4bba-8230-08326c228135",
+            "profile_type": "Personal",
+            "updated_at": "2023-10-03T15:26:06.642505+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "J329+WJ2, Tipu Rd, Chamanzar Colony, Rawalpindi, Punjab 46000",
+            "site_alias": "HFH",
+            "site_id": "8b576878-e502-4d29-b899-e2f27aff47a0",
+            "site_name": "Holy Family Hospital",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Rawalpindi Medical University"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "RMU",
+            "system_guid": "16000f89-f692-4a8f-8e83-2c8c92ca0822",
+            "system_full_name": "Rawalpindi Medical University"
+          }
+        },
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "083b193b-5aa1-4bea-bd60-816734fc8c2e",
+      "hsai_id": 69,
+      "created_at": "2023-09-30T18:16:09.128886+00:00",
+      "role": "Clinician",
+      "user": "aaa@a.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "aaa@a.com",
+            "first_name": "TestingDemo",
+            "last_name": "DemoTesting",
+            "gender": "Male",
+            "date_of_birth": "1997-09-26",
+            "created_at": "2023-09-30T18:16:09.205106+00:00",
+            "phone": "342112",
+            "practice_address": "asda",
+            "practice_name": "saddsa",
+            "profile_id": "42bfa5dd-54cc-4be0-bec4-854bb40a01ca",
+            "profile_type": "Personal",
+            "updated_at": "2023-09-30T18:16:09.722337+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "00417906-01a1-4442-89d4-68e85d6836e9",
+      "hsai_id": 68,
+      "created_at": "2023-09-30T18:16:07.847903+00:00",
+      "role": "Clinician",
+      "user": "aa@a.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "aa@a.com",
+            "first_name": "TestingDemo",
+            "last_name": "DemoTesting",
+            "gender": "Male",
+            "date_of_birth": "1997-09-18",
+            "created_at": "2023-09-30T18:16:08.062556+00:00",
+            "phone": "23123123",
+            "practice_address": "asdsa",
+            "practice_name": "sdsasa",
+            "profile_id": "dc393427-704d-45fb-b806-eba2b7909f71",
+            "profile_type": "Personal",
+            "updated_at": "2023-09-30T18:16:10.437439+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "Demo",
+            "site_id": "3f01c19e-0825-4214-9911-62be6f4c07a3",
+            "site_name": "External DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hsai_site": {
+            "site_address": "123 street",
+            "site_alias": "DemoINT",
+            "site_id": "12e0fbee-2a19-463c-b9ff-58eabf390e77",
+            "site_name": "Internal DemoSite",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Demo"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "DS",
+            "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+            "system_full_name": "Demo"
+          }
+        }
+      ]
+    },
+    {
+      "hsai_guid": "f457efa1-2302-47ed-ba09-6d6c74457a5f",
+      "hsai_id": 58,
+      "created_at": "2023-09-28T10:18:23.407278+00:00",
+      "role": "Clinician",
+      "user": "john@aineurocare.com",
+      "hsai_user_to_profile_mappings": [
+        {
+          "hsai_user_profile": {
+            "email": "john@aineurocare.com",
+            "first_name": "John",
+            "last_name": "Doe",
+            "gender": "Male",
+            "date_of_birth": "1990-05-02",
+            "created_at": "2023-09-28T10:18:23.490509+00:00",
+            "phone": "+1234567890",
+            "practice_address": "123 Main St 224",
+            "practice_name": "Dr John",
+            "profile_id": "3780c1e5-8cf0-4550-90c6-026b2f91fab2",
+            "profile_type": "Personal",
+            "updated_at": "2023-09-28T11:18:23.64167+00:00"
+          }
+        }
+      ],
+      "hsai_site_to_user_mappings": [
+        {
+          "hsai_site": {
+            "site_address": "lahore",
+            "site_alias": "TSH",
+            "site_id": "5bdcc21c-30af-401a-94cb-e07339e1d8e5",
+            "site_name": "Testing Site Hospital",
+            "hsai_site_to_system_mappings": [
+              {
+                "hsai_system": {
+                  "system_full_name": "Production Testing Hospital"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "hsai_system_user_mappings": [
+        {
+          "hsai_system": {
+            "system_address": ".",
+            "system_alias": "PTH",
+            "system_guid": "02ce6937-a179-4ef3-bf6d-2a02ba11a2a8",
+            "system_full_name": "Production Testing Hospital"
+          }
+        }
+      ]
+    }
+  ],
+  "count": 13
+}

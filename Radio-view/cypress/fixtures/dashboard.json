@@ -1,0 +1,9 @@
+{
+  "data": {
+    "clinician": 5,
+    "site_admin": 2,
+    "system_admin": 2,
+    "study": 3,
+    "patient": 4
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "hsai_systems": [
+    {
+      "system_guid": "16000f89-f692-4a8f-8e83-2c8c92ca0822",
+      "system_full_name": "Rawalpindi Medical University",
+      "system_alias": "RMU",
+      "system_address": "."
+    },
+    {
+      "system_guid": "3365113b-9e97-4473-82eb-412488cf0e21",
+      "system_full_name": "Sarwar Foundation Hospital ",
+      "system_alias": "SFH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "f5a00242-5d5f-460d-9e7a-dbe49a6e7c92",
+      "system_full_name": "Demo",
+      "system_alias": "DS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "dde0e461-5dd3-453b-8a6c-7e3d88738b20",
+      "system_full_name": "MultiSiteTest",
+      "system_alias": "MST",
+      "system_address": "."
+    },
+    {
+      "system_guid": "98cfa97c-cf8e-47ab-9d02-742abea6db6b",
+      "system_full_name": "TestSystemIsmail",
+      "system_alias": "TSI",
+      "system_address": "."
+    },
+    {
+      "system_guid": "02ce6937-a179-4ef3-bf6d-2a02ba11a2a8",
+      "system_full_name": "Production Testing Hospital",
+      "system_alias": "PTH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "9eec54a6-7311-40e5-a9ef-cca2307ca599",
+      "system_full_name": "Production System",
+      "system_alias": "PS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "acfd6afb-64d3-4037-927b-1439fce5ff19",
+      "system_full_name": "Al-Madina Diagnostics Gojra",
+      "system_alias": "AMD",
+      "system_address": "."
+    },
+    {
+      "system_guid": "8fd415bf-9420-4e44-bc35-dd0e874036d0",
+      "system_full_name": "TestingSystem",
+      "system_alias": "TS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "9f8a0732-b01d-41d9-98fc-363263553e8e",
+      "system_full_name": "TestingSystem1",
+      "system_alias": "TS1",
+      "system_address": "."
+    },
+    {
+      "system_guid": "5c024874-1d18-48e0-b705-347286f110cb",
+      "system_full_name": "System1",
+      "system_alias": "S1",
+      "system_address": "."
+    },
+    {
+      "system_guid": "d5b333d7-ef8d-410c-ae7a-2cc72b1ac334",
+      "system_full_name": "Production System",
+      "system_alias": "PS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "092eb184-6f8d-4aa1-945d-2ed4e51b66e1",
+      "system_full_name": "ziauddin",
+      "system_alias": "zh",
+      "system_address": "."
+    },
+    {
+      "system_guid": "1b762231-7359-4d68-9422-67819f87279a",
+      "system_full_name": "TestingSystem12",
+      "system_alias": "TEST12",
+      "system_address": "."
+    },
+    {
+      "system_guid": "c3c58dc0-09e1-4cf2-9018-deb643ce65ed",
+      "system_full_name": "Sindh Institute of Urology and Transplantation",
+      "system_alias": "SIUT",
+      "system_address": "."
+    },
+    {
+      "system_guid": "35a024a1-aac3-4139-a6f5-85b603986c66",
+      "system_full_name": "Jinnah hospiatl",
+      "system_alias": "JH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "d11251c7-fb26-4737-948b-a729cb4bf169",
+      "system_full_name": "dsadasd",
+      "system_alias": "asd",
+      "system_address": "."
+    },
+    {
+      "system_guid": "b408e93d-7dc3-413d-ab3c-19cabdfd0516",
+      "system_full_name": "test",
+      "system_alias": "test",
+      "system_address": "."
+    },
+    {
+      "system_guid": "66cd5eaa-1a0e-47b1-958f-3da176766753",
+      "system_full_name": "testnew123",
+      "system_alias": "123a",
+      "system_address": "."
+    },
+    {
+      "system_guid": "f0734f6d-7b8b-40c6-912b-212721ce6db7",
+      "system_full_name": "Ziaddin hospital karachi",
+      "system_alias": "ZHKH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "263e5e1d-f1a3-4cd3-b1c7-92a2a509e656",
+      "system_full_name": "Ziaddin hospital karachi",
+      "system_alias": "ZHKH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "6d550f1a-5a9e-4631-99b6-9627c21ad52b",
+      "system_full_name": "ApiTest",
+      "system_alias": "APT",
+      "system_address": "."
+    },
+    {
+      "system_guid": "2a1f8e1d-722f-457b-a64e-d7bf3e113e3a",
+      "system_full_name": "Ziaddin hospital karachi",
+      "system_alias": "ZHKH",
+      "system_address": "."
+    },
+    {
+      "system_guid": "33a41c55-b8da-4c53-8d61-cafac6987fde",
+      "system_full_name": "Test System Integration test 111111",
+      "system_alias": "TSIN",
+      "system_address": "."
+    },
+    {
+      "system_guid": "952b26da-2c1d-4ddb-904b-74761b7cf954",
+      "system_full_name": "Usability",
+      "system_alias": "UTS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "bc2cef34-1d96-49e3-a382-011b504e46a7",
+      "system_full_name": "IntegrationTestSystem",
+      "system_alias": "ITS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "749d3db2-bfc9-4b18-8312-607bdbbd9c74",
+      "system_full_name": "asdsas",
+      "system_alias": "sdsadsa",
+      "system_address": "."
+    },
+    {
+      "system_guid": "f5fafd4d-58f4-4f3a-93a5-11b0dae0632d",
+      "system_full_name": "asds",
+      "system_alias": "asdsd",
+      "system_address": "."
+    },
+    {
+      "system_guid": "0c800e88-9c52-4563-b916-612df26079d2",
+      "system_full_name": "test",
+      "system_alias": "test",
+      "system_address": "."
+    },
+    {
+      "system_guid": "516754bf-a1cd-44be-9994-91c443dc3859",
+      "system_full_name": "Sadia Test System",
+      "system_alias": "STT",
+      "system_address": "."
+    },
+    {
+      "system_guid": "6a7694d5-9b0b-49a6-8cf0-6a8e329953a0",
+      "system_full_name": "TTTTTT",
+      "system_alias": "TTTTT",
+      "system_address": "."
+    },
+    {
+      "system_guid": "53fa92bc-5a0a-4302-8450-7efc767ad757",
+      "system_full_name": "TESTTTTTTTTT",
+      "system_alias": "TESTTTTTTT",
+      "system_address": "."
+    },
+    {
+      "system_guid": "0da10a1e-3a98-4feb-bf47-5cdd48f979fd",
+      "system_full_name": "Usability Test System",
+      "system_alias": "UTS",
+      "system_address": "."
+    },
+    {
+      "system_guid": "9e9aa84d-4019-4eba-a5b9-3a86a1508fd3",
+      "system_full_name": "asdsad",
+      "system_alias": "asdsa",
+      "system_address": "."
+    },
+    {
+      "system_guid": "4eb19f91-f7a9-461c-b880-693e1e001813",
+      "system_full_name": "UsaTest",
+      "system_alias": "UT",
+      "system_address": "."
+    }
+  ]
+}
